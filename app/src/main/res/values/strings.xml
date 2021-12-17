@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">The Beatles App</string>
+    <string name="play">Iniciar</string>
+    <string name="about_game">Sobre</string>
+    <string name="Rules_label">Regras</string>
+    <string name="check">Ok</string>
+    <string name="play_again_text">Jogar Novamente!</string>
+    <string name="share_label">Compartilhar</string>
+    <string name="share_text_win">Parabéns você é um verdadeiro Beatlemaníaco!\nSua pontuação foram: %2$d repostas corretas!
+                                  \nBom Trabalho!</string>
+    <string name="share_text_lost">Não foi desta vez!\nVocê acertou apenas %2$d questões!
+                                  \nTente novamente!</string>
+    <string name="about">Sobre</string>
+    <string name="rules">Regras</string>
+
+</resources>

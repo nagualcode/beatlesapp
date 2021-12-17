@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.infnet.thebeatles.telas.title.TitleFragment"
+        android:label="TitleFragment"
+        tools:layout="@layout/title_fragment">
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.infnet.thebeatles.telas.about.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/about_fragment" />
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.infnet.thebeatles.telas.rules.RulesFragment"
+        android:label="RulesFragment"
+        tools:layout="@layout/rules_fragment" />
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.infnet.thebeatles.telas.game.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/game_fragment">
+        <action
+            android:id="@+id/action_gameFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.infnet.thebeatles.telas.result.ResultFragment"
+        android:label="ResultFragment"
+        tools:layout="@layout/result_fragment">
+        <argument
+            android:name="finalScore"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="result"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/restart"
+            app:destination="@id/titleFragment"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
